@@ -1,26 +1,18 @@
-```toml
 baseURL = "https://nganh25.github.io/fcj-workshop-template/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "vi"
 
-# Theme sử dụng khi build website
 theme = "hugo-theme-learn"
 
-# Cấu hình output để hỗ trợ tìm kiếm
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Có thể dùng: red, blue, green hoặc workshop
   themeVariant = "workshop"
-
-  # Link repository GitHub
   editURL = "https://github.com/nganh25/fcj-workshop-template/edit/main/content/"
-
   description = "Internship Worklog"
   author = "nganh25"
-
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -65,4 +57,3 @@ weight = 20
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-```
