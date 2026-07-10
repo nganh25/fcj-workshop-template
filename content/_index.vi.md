@@ -16,13 +16,13 @@ chapter: false
 
 **Ngành:** Công nghệ thông tin
 
-**Lớp:** AWS042026
+**Lớp:** 22DTHJB2
 
 **Công ty thực tập:** Công ty TNHH Amazon Web Services Việt Nam
 
 **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-**Thời gian thực tập:** Từ ngày 14/04/2025 đến ngày 10/7/2025
+**Thời gian thực tập:** Từ ngày 17/04/2025 đến ngày 10/7/2025
 
 ---
 
