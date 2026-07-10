@@ -9,7 +9,7 @@ chapter: false
 
 **Full Name:** Nguyen Trung Anh
 
-**Phone Number:** [Enter your phone number]
+**Phone Number:** 0378477079
 
 **Email:** nguyentrunganh677@gmail.com
 
@@ -17,74 +17,55 @@ chapter: false
 
 **Major:** Information Technology
 
-**Class:** AWS042026
+**Class:** 22DTHJB2
 
 **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
 **Internship Program:** Workforce Bootcamp - First Cloud AI Journey
 
-**Internship Period:** From August 12, 2025 to November 12, 2025
+**Internship Period:** From April 17, 2025 to July 10, 2025
 
 ---
 
 ## Profile Picture
 
-<div style="text-align: center;">
-  <img src="/fcj-workshop-template/images/avatar.jpg"
-       alt="Nguyen Trung Anh"
-       style="width: 220px; border-radius: 10px;">
+<div align="center">
+    <img src="/fcj-workshop-template/images/avatar.jpg" width="220"/>
 </div>
 
 ---
 
-## Internship Project
+# Internship Project
 
-### Smart Attendance SaaS
+## Smart Attendance SaaS
 
-Smart Attendance SaaS is an attendance management system built on Amazon Web Services using a serverless architecture.
+Smart Attendance SaaS is a cloud-based attendance management system built on **Amazon Web Services (AWS)** using a **Serverless Architecture**.
 
-The system provides the following main features:
+During the **first four weeks** of the internship, I focused on learning the core AWS services, including Amazon S3, CloudFront, Route 53, Amazon Cognito, API Gateway, AWS Lambda, DynamoDB, Amazon SQS, AWS Step Functions, Amazon EventBridge, Amazon SES, Amazon CloudWatch, and other essential cloud services used for building modern serverless applications.
 
-- User authentication and authorization.
-- Employee management.
-- Check-in and check-out.
-- Attendance history tracking.
-- Attendance report generation.
-- Email notifications.
-- System monitoring and error tracking.
-
-During the first four weeks, I studied core Amazon Web Services. During the following four weeks, I applied the knowledge to analyze, design, and develop the Smart Attendance SaaS project.
+During the **following four weeks**, I applied the acquired knowledge to analyze, design, and implement the **Smart Attendance SaaS** project. The system enables organizations to manage employees, perform check-in/check-out operations, generate attendance reports, send email notifications, and monitor system performance using AWS Serverless technologies.
 
 ---
 
 # Report Contents
 
-## 1. Worklog
+1. **Worklog**
+   - Weekly internship journal documenting the tasks performed, learning progress, and achievements throughout the internship.
 
-Weekly internship activities, tasks, and achieved results.
+2. **Proposal**
+   - Project proposal describing the objectives, scope, requirements, and system architecture of the Smart Attendance SaaS project.
 
-{{% children description="true" %}}
+3. **Published Blog Posts**
+   - A collection of blog posts sharing AWS knowledge, technical experiences, and lessons learned during the project development.
 
-## 2. Proposal
+4. **Participated Events**
+   - A summary of workshops, seminars, technical sharing sessions, and activities attended during the Workforce Bootcamp program.
 
-Project proposal including objectives, scope, users, requirements, and system architecture.
+5. **Workshop**
+   - A detailed guide to designing, developing, and deploying the Smart Attendance SaaS project on Amazon Web Services.
 
-## 3. Published Blog Posts
+6. **Self Assessment**
+   - An evaluation of the knowledge, technical skills, and practical experience gained throughout the internship.
 
-A collection of articles sharing AWS knowledge and experiences gained during the internship.
-
-## 4. Participated Events
-
-A summary of training sessions, seminars, workshops, and activities attended during the Workforce Bootcamp - First Cloud AI Journey program.
-
-## 5. Workshop
-
-A detailed guide to designing, developing, and deploying the Smart Attendance SaaS system on Amazon Web Services.
-
-## 6. Self-Assessment
-
-An evaluation of the knowledge, technical skills, working attitude, and results achieved during the internship.
-
-## 7. Feedback and Contributions
-
-Personal experiences and suggestions for improving the training and internship program.
+7. **Feedback and Suggestions**
+   - Personal reflections, feedback, and recommendations for improving the internship and training program.
