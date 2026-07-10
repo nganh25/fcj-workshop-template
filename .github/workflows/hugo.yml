@@ -1,4 +1,3 @@
-```yaml
 name: Deploy Hugo site to GitHub Pages
 
 on:
@@ -28,9 +27,6 @@ jobs:
           hugo-version: "0.134.3"
           extended: true
 
-      - name: Show Hugo version
-        run: hugo version
-
       - name: Build website
         run: hugo --minify --baseURL "https://nganh25.github.io/fcj-workshop-template/"
 
@@ -41,4 +37,3 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
-```
