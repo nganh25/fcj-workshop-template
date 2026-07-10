@@ -1,42 +1,47 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+```toml
+baseURL = "https://nganh25.github.io/fcj-workshop-template/"
 relativeURLs = false
 canonifyURLs = false
-defaultContentLanguage = "en"
+defaultContentLanguage = "vi"
 
-# Change the default theme to be use when building the site with Hugo
+# Theme sử dụng khi build website
 theme = "hugo-theme-learn"
 
-# For search functionality
+# Cấu hình output để hỗ trợ tìm kiếm
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  # Có thể dùng: red, blue, green hoặc workshop
   themeVariant = "workshop"
-  # Git hub repo link
-  editURL = ""
-  description = ""
-  author = "thienlh@thienlu.com"
+
+  # Link repository GitHub
+  editURL = "https://github.com/nganh25/fcj-workshop-template/edit/main/content/"
+
+  description = "Internship Worklog"
+  author = "nganh25"
+
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-  
+
 [Languages]
+
 [Languages.en]
 title = "Internship Report"
 weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "https://awsstudygroup.com"
-weight = 20
+name = "<i class='fab fa-github'></i> GitHub Repository"
+identifier = "github-repository-en"
+url = "https://github.com/nganh25/fcj-workshop-template"
+weight = 10
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-facebook'></i> AWS Study Group - FB Group"
-identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/awsstudygroupfcj"
+name = "<i class='fab fa-aws'></i> AWS Study Group"
+identifier = "aws-study-group-en"
+url = "https://awsstudygroup.com"
 weight = 20
 
 [Languages.vi]
@@ -45,18 +50,19 @@ weight = 2
 languageName = "Tiếng Việt"
 
 [[Languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "http://awsstudygroup.com"
-weight = 20
+name = "<i class='fab fa-github'></i> GitHub Repository"
+identifier = "github-repository-vi"
+url = "https://github.com/nganh25/fcj-workshop-template"
+weight = 10
 
 [[Languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB"
-identifier = "AWS Study Group FB"
-url = "https://www.facebook.com/groups/awsstudygroupfcj"
+name = "<i class='fab fa-aws'></i> AWS Study Group"
+identifier = "aws-study-group-vi"
+url = "https://awsstudygroup.com"
 weight = 20
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+```
