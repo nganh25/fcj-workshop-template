@@ -1,44 +1,90 @@
 ---
 title: "Internship Report"
-date: 2024-01-01
-weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+# INTERNSHIP REPORT
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+## Student Information
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+**Full Name:** Nguyen Trung Anh
 
-&emsp; **Phone Number:** 0989888999 
+**Phone Number:** [Enter your phone number]
 
-&emsp; **Email:** Anguyenvan@gmail.com
+**Email:** nguyentrunganh677@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+**University:** Ho Chi Minh City University of Technology (HUTECH)
 
-&emsp; **Major:** Information Technology
+**Major:** Information Technology
 
-&emsp; **Class:** AWS082025
+**Class:** AWS082025
 
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
+**Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
+**Internship Program:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+**Internship Period:** From August 12, 2025 to November 12, 2025
 
-![Your profile picture](/images/avatar.png)
+---
 
-### Report Content
+## Profile Picture
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+<div style="text-align: center;">
+  <img src="/fcj-workshop-template/images/avatar.jpg"
+       alt="Nguyen Trung Anh"
+       style="width: 220px; border-radius: 10px;">
+</div>
+
+---
+
+## Internship Project
+
+### Smart Attendance SaaS
+
+Smart Attendance SaaS is an attendance management system built on Amazon Web Services using a serverless architecture.
+
+The system provides the following main features:
+
+- User authentication and authorization.
+- Employee management.
+- Check-in and check-out.
+- Attendance history tracking.
+- Attendance report generation.
+- Email notifications.
+- System monitoring and error tracking.
+
+During the first four weeks, I studied core Amazon Web Services. During the following four weeks, I applied the knowledge to analyze, design, and develop the Smart Attendance SaaS project.
+
+---
+
+# Report Contents
+
+## 1. Worklog
+
+Weekly internship activities, tasks, and achieved results.
+
+{{% children description="true" %}}
+
+## 2. Proposal
+
+Project proposal including objectives, scope, users, requirements, and system architecture.
+
+## 3. Published Blog Posts
+
+A collection of articles sharing AWS knowledge and experiences gained during the internship.
+
+## 4. Participated Events
+
+A summary of training sessions, seminars, workshops, and activities attended during the Workforce Bootcamp - First Cloud AI Journey program.
+
+## 5. Workshop
+
+A detailed guide to designing, developing, and deploying the Smart Attendance SaaS system on Amazon Web Services.
+
+## 6. Self-Assessment
+
+An evaluation of the knowledge, technical skills, working attitude, and results achieved during the internship.
+
+## 7. Feedback and Contributions
+
+Personal experiences and suggestions for improving the training and internship program.
