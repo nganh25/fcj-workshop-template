@@ -2,14 +2,13 @@
 title: "Báo cáo thực tập"
 chapter: false
 ---
-
 # BÁO CÁO THỰC TẬP
 
 ## Thông tin sinh viên
 
 **Họ và tên:** Nguyễn Trung Anh
 
-**Số điện thoại:** [Điền số điện thoại của bạn]
+**Số điện thoại:** 0378477079
 
 **Email:** nguyentrunganh677@gmail.com
 
@@ -29,62 +28,43 @@ chapter: false
 
 ## Ảnh đại diện
 
-<div style="text-align: center;">
-  <img src="/fcj-workshop-template/images/avatar.jpg"
-       alt="Ảnh đại diện Nguyễn Trung Anh"
-       style="width: 220px; border-radius: 10px;">
+<div align="center">
+    <img src="/fcj-workshop-template/images/avatar.jpg" width="220"/>
 </div>
 
 ---
 
 ## Đề tài thực tập
 
-### Smart Attendance SaaS
+# Smart Attendance SaaS
 
-Smart Attendance SaaS là hệ thống quản lý chấm công được xây dựng trên nền tảng Amazon Web Services theo kiến trúc Serverless.
+Smart Attendance SaaS là hệ thống quản lý chấm công được xây dựng trên nền tảng **Amazon Web Services (AWS)** theo kiến trúc **Serverless**.
 
-Hệ thống hỗ trợ các chức năng chính như:
+Trong **4 tuần đầu**, tôi nghiên cứu các dịch vụ cốt lõi của AWS như Amazon S3, CloudFront, Route 53, Amazon Cognito, API Gateway, Lambda, DynamoDB, SQS, Step Functions, EventBridge, SES, CloudWatch và các dịch vụ hỗ trợ triển khai hệ thống trên nền tảng đám mây.
 
-- Đăng nhập và xác thực người dùng.
-- Quản lý nhân viên.
-- Check-in và check-out.
-- Theo dõi lịch sử chấm công.
-- Xuất báo cáo chấm công.
-- Gửi thông báo qua email.
-- Giám sát hoạt động và lỗi hệ thống.
-
-Trong 4 tuần đầu, tôi tìm hiểu các dịch vụ của Amazon Web Services. Trong 4 tuần tiếp theo, tôi áp dụng các kiến thức đã học để phân tích, thiết kế và xây dựng dự án Smart Attendance SaaS.
+Trong **4 tuần tiếp theo**, tôi áp dụng những kiến thức đã học để phân tích, thiết kế và triển khai dự án **Smart Attendance SaaS**. Dự án cho phép doanh nghiệp quản lý nhân viên, thực hiện check-in/check-out, xuất báo cáo, gửi email thông báo và giám sát hệ thống theo kiến trúc Serverless trên AWS.
 
 ---
 
 # Nội dung báo cáo
 
-## 1. Worklog
+1. **Worklog**
+   - Nhật ký công việc theo từng tuần trong suốt quá trình thực tập.
 
-Nội dung công việc và kết quả đạt được trong từng tuần thực tập.
+2. **Proposal**
+   - Đề xuất dự án Smart Attendance SaaS, mục tiêu, phạm vi, yêu cầu và kiến trúc hệ thống.
 
-{{% children description="true" %}}
+3. **Các bài blogs đã đăng**
+   - Tổng hợp các bài viết chia sẻ kiến thức AWS và kinh nghiệm thực hiện dự án.
 
-## 2. Proposal
+4. **Các events đã tham gia**
+   - Danh sách các buổi workshop, seminar và hoạt động trong chương trình Workforce Bootcamp.
 
-Trình bày đề xuất dự án Smart Attendance SaaS, mục tiêu, phạm vi, đối tượng sử dụng và kiến trúc hệ thống.
+5. **Workshop**
+   - Hướng dẫn triển khai dự án Smart Attendance SaaS trên Amazon Web Services.
 
-## 3. Các bài blog đã đăng
+6. **Tự đánh giá**
+   - Đánh giá kết quả học tập, kỹ năng đạt được và những kinh nghiệm tích lũy trong thời gian thực tập.
 
-Tổng hợp các bài viết chia sẻ kiến thức và kinh nghiệm trong quá trình học tập, thực hành AWS và xây dựng dự án.
-
-## 4. Các sự kiện đã tham gia
-
-Tổng hợp các buổi đào tạo, hội thảo, workshop và hoạt động trong chương trình Workforce Bootcamp - First Cloud AI Journey.
-
-## 5. Workshop
-
-Trình bày quy trình xây dựng và triển khai hệ thống Smart Attendance SaaS trên Amazon Web Services.
-
-## 6. Tự đánh giá
-
-Đánh giá kiến thức, kỹ năng, thái độ làm việc và những kết quả đạt được trong thời gian thực tập.
-
-## 7. Chia sẻ và đóng góp ý kiến
-
-Chia sẻ trải nghiệm cá nhân và đề xuất nhằm cải thiện chương trình đào tạo và quá trình thực tập.
+7. **Chia sẻ, đóng góp ý kiến**
+   - Những chia sẻ cá nhân và đề xuất nhằm cải thiện chương trình thực tập.
