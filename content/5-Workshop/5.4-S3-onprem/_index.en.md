@@ -1,14 +1,14 @@
 ---
-title: "Tích hợp Frontend, Cognito và API"
+title: "Integrate the Frontend, Cognito, and API"
 date: 2026-07-22
 weight: 4
 chapter: false
 pre: "<b>5.4. </b>"
 ---
 
-# Tích hợp Frontend, Cognito và API
+# Integrate the Frontend, Cognito, and API
 
-## Biến môi trường
+## Environment Variables
 
 ```env
 VITE_API_URL=https://API_ID.execute-api.ap-southeast-1.amazonaws.com
@@ -17,7 +17,7 @@ VITE_COGNITO_USER_POOL_ID=ap-southeast-1_xxxxx
 VITE_COGNITO_CLIENT_ID=xxxxxxxx
 ```
 
-Không đặt AWS Secret Access Key trong Frontend.
+Never place an AWS Secret Access Key in frontend code.
 
 ## JWT Header
 
@@ -34,10 +34,10 @@ npm install
 npm run build
 ```
 
-## Upload S3
+## Upload to S3
 
 ```powershell
-aws s3 sync .\dist s3://TEN_BUCKET --delete
+aws s3 sync .\dist s3://BUCKET_NAME --delete
 ```
 
-Sau đó tạo CloudFront Distribution với S3 Origin Access Control, HTTPS và SPA fallback về `index.html`.
+Then create a CloudFront distribution with S3 Origin Access Control, HTTPS, and SPA fallback to `index.html`.

@@ -1,39 +1,43 @@
 ---
-title: "Self-Assessment"
-date: 2024-01-01
+title: "Tự đánh giá"
+date: 2026-07-22
 weight: 6
 chapter: false
-pre: " <b> 6. </b> "
+pre: "<b>6. </b>"
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Tự đánh giá
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+Trong quá trình tham gia Workforce Bootcamp – First Cloud AI Journey và xây dựng Smart Attendance SaaS, tôi đã vận dụng kiến thức từ trường vào một dự án Cloud thực tế.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+## Kết quả đạt được
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+| Tiêu chí | Mức đánh giá | Minh chứng |
+|---|---|---|
+| Kiến thức AWS | Tốt | Hiểu và áp dụng Compute, Networking, Storage, Serverless và Security |
+| Khả năng học hỏi | Tốt | Chủ động đọc tài liệu và xử lý lỗi |
+| Trách nhiệm | Tốt | Hoàn thành Worklog, tài liệu và phần việc được giao |
+| Làm việc nhóm | Tốt | Sử dụng GitHub, Pull Request và trao đổi kiến trúc |
+| Giao tiếp kỹ thuật | Khá | Trình bày sơ đồ và giải thích luồng hệ thống |
+| Giải quyết vấn đề | Khá | Xử lý lỗi IAM, CORS, JWT, Hugo và triển khai |
+| Kỷ luật và quản lý thời gian | Khá | Cần cải thiện việc theo dõi tiến độ đều đặn |
+| Tổng thể | Tốt | Hoàn thành mục tiêu chương trình và MVP |
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+## Điểm mạnh
 
-### Needs Improvement
+- Có khả năng tự nghiên cứu công nghệ mới.
+- Hiểu mối liên hệ giữa các dịch vụ AWS.
+- Chú trọng bảo mật, chi phí và khả năng vận hành.
+- Sẵn sàng hỗ trợ nhóm trong quá trình triển khai và kiểm thử.
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+## Điểm cần cải thiện
+
+- Nâng cao kiến thức Linux, Networking và troubleshooting chuyên sâu.
+- Viết Unit Test và Integration Test đầy đủ hơn.
+- Cải thiện khả năng trình bày bằng tiếng Anh.
+- Lập kế hoạch và cập nhật tài liệu sớm hơn, tránh dồn vào cuối kỳ.
+- Tiếp tục học AWS Certification và thực hành dự án Production-like.
+
+## Định hướng
+
+Tôi định hướng phát triển theo vị trí **Cloud Engineer/Infrastructure Engineer**, tập trung vào AWS, Linux, Networking, Infrastructure as Code, CI/CD, Security và Observability.

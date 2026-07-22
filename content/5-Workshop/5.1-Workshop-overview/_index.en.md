@@ -1,18 +1,18 @@
 ---
-title: "Tổng quan kiến trúc và mã nguồn"
+title: "Architecture and Source-Code Overview"
 date: 2026-07-22
 weight: 1
 chapter: false
 pre: "<b>5.1. </b>"
 ---
 
-# Tổng quan kiến trúc và mã nguồn
+# Architecture and Source-Code Overview
 
-## Bài toán
+## Problem
 
-Smart Attendance SaaS quản lý người dùng, Clock-in/Clock-out, lịch sử, hồ sơ và báo cáo cho nhiều tổ chức.
+Smart Attendance SaaS manages users, clock-in and clock-out, attendance history, profiles, and reports for multiple organizations.
 
-## Luồng chính
+## Main Flow
 
 ```text
 Route 53 → CloudFront → S3 React SPA
@@ -29,7 +29,7 @@ Route 53 → CloudFront → S3 React SPA
                      DynamoDB
 ```
 
-## Cấu trúc mã nguồn
+## Source Structure
 
 ```text
 smart-attendance-saas
@@ -47,4 +47,4 @@ smart-attendance-saas
         └── utils/api.js
 ```
 
-`template.yaml` khai báo hạ tầng; `server.js` hỗ trợ chạy local; các handler xử lý nghiệp vụ; `AuthContext.jsx` quản lý phiên đăng nhập; `api.js` gửi request và JWT.
+`template.yaml` defines infrastructure; `server.js` supports local execution; handlers implement business logic; `AuthContext.jsx` manages authentication state; and `api.js` sends API requests with JWTs.

@@ -6,15 +6,19 @@ chapter: false
 pre: "<b>5. </b>"
 ---
 
-# Build and deploy Smart Attendance SaaS on AWS
+# Xây dựng và triển khai Smart Attendance SaaS trên AWS
 
-This workshop follows the existing Smart Attendance SaaS source-code structure. It covers local development, AWS SAM deployment, Cognito authentication, API integration, React hosting, monitoring, security checks, and resource cleanup.
+Workshop hướng dẫn đọc mã nguồn, chạy local, triển khai Backend bằng AWS SAM, tích hợp React với Cognito và API Gateway, kiểm thử, giám sát và dọn dẹp tài nguyên.
 
-## Workshop contents
+## Nội dung
 
-1. [Architecture and source code overview](5.1-workshop-overview/)
-2. [Prerequisites](5.2-prerequisite/)
-3. [Run and deploy the Backend](5.3-s3-vpc/)
-4. [Integrate Frontend, Cognito, and API](5.4-s3-onprem/)
-5. [Testing, security, and monitoring](5.5-policy/)
-6. [Cleanup](5.6-cleanup/)
+1. [Tổng quan kiến trúc và mã nguồn](5.1-workshop-overview/)
+2. [Chuẩn bị môi trường](5.2-prerequisite/)
+3. [Chạy thử và triển khai Backend](5.3-s3-vpc/)
+4. [Tích hợp Frontend, Cognito và API](5.4-s3-onprem/)
+5. [Kiểm thử, bảo mật và giám sát](5.5-policy/)
+6. [Dọn dẹp tài nguyên](5.6-cleanup/)
+
+## Kết quả
+
+Sau workshop, người học có thể triển khai MVP gồm Cognito, API Gateway, Lambda, DynamoDB, S3 và CloudFront; đồng thời biết kiểm tra CloudWatch Logs, IAM và các lỗi phổ biến.

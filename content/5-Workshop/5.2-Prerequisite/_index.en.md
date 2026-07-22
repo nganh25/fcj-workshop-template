@@ -1,14 +1,14 @@
 ---
-title: "Chuẩn bị môi trường"
+title: "Prerequisites"
 date: 2026-07-22
 weight: 2
 chapter: false
 pre: "<b>5.2. </b>"
 ---
 
-# Chuẩn bị môi trường
+# Prerequisites
 
-## Công cụ
+## Tools
 
 ```powershell
 node --version
@@ -18,22 +18,22 @@ aws --version
 sam --version
 ```
 
-Cần Node.js, npm, Git, AWS CLI v2, AWS SAM CLI và Visual Studio Code.
+Install Node.js, npm, Git, AWS CLI v2, AWS SAM CLI, and Visual Studio Code.
 
-## Cấu hình AWS
+## AWS Configuration
 
 ```powershell
 aws configure
 aws sts get-caller-identity
 ```
 
-Region đề xuất:
+Recommended Region:
 
 ```text
 ap-southeast-1
 ```
 
-## Chạy project local
+## Run the Project Locally
 
 Backend:
 
@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-## Kiểm tra SAM
+## Validate SAM
 
 ```powershell
 cd C:\Users\nguye\smart-attendance-saas\backend

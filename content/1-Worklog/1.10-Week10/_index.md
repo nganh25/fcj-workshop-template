@@ -1,57 +1,33 @@
 ---
-title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+title: "Worklog Tuần 10"
+date: 2026-06-22
+weight: 10
 chapter: false
-pre: " <b> 1.10. </b> "
+pre: "<b>1.10. </b>"
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# Worklog Tuần 10
 
-### Week 10 Objectives:
+### Mục tiêu định hướng trong tuần 10
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Cấu hình AWS WAF và tìm hiểu AWS Shield.
+- Quản lý bí mật bằng Secrets Manager.
+- Mã hóa dữ liệu bằng AWS KMS.
+- Rà soát IAM và Tenant Isolation.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể
 
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tạo WAF rate-based rule cho CloudFront/API. | 22/06/2026 | 22/06/2026 | Tài liệu AWS và tài liệu dự án |
+| Thứ Ba | Đánh giá cơ chế bảo vệ DDoS của Shield. | 23/06/2026 | 23/06/2026 | Tài liệu AWS và tài liệu dự án |
+| Thứ Tư | Chuyển API key và credential khỏi source code. | 24/06/2026 | 24/06/2026 | Tài liệu AWS và tài liệu dự án |
+| Thứ Năm | Tạo KMS key và kiểm tra quyền sử dụng khóa. | 25/06/2026 | 25/06/2026 | Tài liệu AWS và tài liệu dự án |
+| Thứ Sáu | Rà soát Least Privilege, Security Hub và GuardDuty. | 26/06/2026 | 26/06/2026 | Tài liệu AWS và tài liệu dự án |
 
-### Week 10 Achievements:
+### Kết quả thu hoạch sau Tuần 10
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Giảm rủi ro cấu hình sai và lộ bí mật.
+- Áp dụng mã hóa cho dữ liệu nhạy cảm.
+- Thu hẹp quyền Lambda Role.
+- Kiểm tra phân tách dữ liệu giữa các Tenant.

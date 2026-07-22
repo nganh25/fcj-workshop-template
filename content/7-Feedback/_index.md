@@ -1,47 +1,41 @@
 ---
-title: "Sharing and Feedback"
-date: 2024-01-01
+title: "Chia sẻ, đóng góp ý kiến"
+date: 2026-07-22
 weight: 7
 chapter: false
-pre: " <b> 7. </b> "
+pre: "<b>7. </b>"
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Chia sẻ và đóng góp ý kiến
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+## Đánh giá chung
 
-### Overall Evaluation
+Chương trình First Cloud AI Journey cung cấp lộ trình từ kiến thức AWS nền tảng đến triển khai dự án. Nội dung phù hợp với sinh viên muốn định hướng Cloud, DevOps hoặc Backend.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+## Điểm hài lòng
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+- Tài liệu và chủ đề học tập đa dạng.
+- Mentor và thành viên hỗ trợ khi gặp vấn đề.
+- Có cơ hội làm việc nhóm và xây dựng kiến trúc AWS thực tế.
+- Dự án giúp kết nối kiến thức Compute, Networking, Storage, Security và DevOps.
+- Website Worklog giúp rèn kỹ năng viết tài liệu kỹ thuật.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+## Khó khăn
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+- Khối lượng kiến thức AWS lớn trong thời gian ngắn.
+- Một số dịch vụ cần nhiều thời gian thực hành mới hiểu rõ.
+- Việc phối hợp Frontend, Backend, IaC và CI/CD dễ phát sinh lỗi tích hợp.
+- Chi phí AWS và quyền IAM cần được kiểm soát cẩn thận.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+## Đề xuất cải thiện
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+- Cung cấp checklist đầu ra rõ ràng cho từng tuần.
+- Có thêm buổi hướng dẫn debugging IAM, CORS, CloudFormation và CI/CD.
+- Chuẩn hóa template Worklog song ngữ ngay từ đầu.
+- Tổ chức review kiến trúc giữa kỳ trước khi nhóm phát triển nhiều chức năng.
+- Bổ sung môi trường sandbox hoặc hướng dẫn kiểm soát chi phí chi tiết.
+- Tăng thời lượng demo và nhận feedback cho từng nhóm.
 
----
+## Mong muốn
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
-
----
-
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+Tôi mong chương trình tiếp tục duy trì nội dung thực hành, cập nhật thêm AI/ML, Kubernetes, Terraform, Security và FinOps. Tôi sẵn sàng giới thiệu chương trình cho các sinh viên có định hướng Cloud vì đây là cơ hội tốt để xây dựng kiến thức và sản phẩm thực tế.
