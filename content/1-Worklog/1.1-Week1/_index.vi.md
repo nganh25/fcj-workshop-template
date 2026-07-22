@@ -1,59 +1,39 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-04-20
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: "<b>1.1. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 1
 
-### Mục tiêu tuần 1:
+### Mục tiêu định hướng trong tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Làm quen với chương trình đào tạo Workforce Bootcamp – First Cloud AI Journey.
+- Nắm được lộ trình học tập, quy định tham gia và yêu cầu của chương trình thực tập.
+- Tìm hiểu các khái niệm cơ bản về điện toán đám mây và hệ sinh thái Amazon Web Services.
+- Khởi tạo tài khoản AWS, cấu hình bảo mật và chuẩn bị môi trường học tập.
+- Tìm hiểu AWS Identity and Access Management, AWS Budgets và AWS Well-Architected Framework.
+- Xác định định hướng cá nhân trong nhóm là Cloud Infrastructure và Cloud Networking.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tham gia buổi định hướng của chương trình First Cloud AI Journey; tìm hiểu nội dung đào tạo, hình thức đánh giá, quy định làm việc nhóm và yêu cầu hoàn thành báo cáo thực tập. | 20/04/2026 | 20/04/2026 | Tài liệu FCAJ |
+| Thứ Ba | Tìm hiểu các khái niệm cơ bản về Cloud Computing; phân biệt mô hình On-premises và Cloud; nghiên cứu các mô hình dịch vụ IaaS, PaaS và SaaS. | 21/04/2026 | 21/04/2026 | AWS Cloud Practitioner Essentials |
+| Thứ Tư | Tìm hiểu cơ sở hạ tầng toàn cầu của AWS gồm Region, Availability Zone và Edge Location; lựa chọn Region phù hợp để thực hành. | 22/04/2026 | 22/04/2026 | AWS Global Infrastructure |
+| Thứ Năm | Tạo tài khoản AWS, kích hoạt xác thực đa yếu tố MFA cho Root user; tìm hiểu IAM User, IAM Group, IAM Role và nguyên tắc phân quyền tối thiểu. | 23/04/2026 | 23/04/2026 | AWS IAM Documentation |
+| Thứ Sáu | Cấu hình AWS Budgets để theo dõi chi phí; tìm hiểu sáu trụ cột của AWS Well-Architected Framework; tổng kết kiến thức trong tuần. | 24/04/2026 | 24/04/2026 | AWS Well-Architected Framework |
 
-### Kết quả đạt được tuần 1:
+### Kết quả thu hoạch thực tế sau Tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được mục tiêu, lộ trình học tập và yêu cầu của chương trình First Cloud AI Journey.
+- Nắm được những khái niệm nền tảng về điện toán đám mây, các mô hình triển khai và mô hình dịch vụ Cloud.
+- Hiểu cách AWS tổ chức cơ sở hạ tầng toàn cầu thông qua Region, Availability Zone và Edge Location.
+- Khởi tạo và cấu hình thành công tài khoản AWS phục vụ quá trình học tập.
+- Kích hoạt MFA nhằm tăng cường bảo mật cho tài khoản Root.
+- Biết cách tạo IAM User và phân quyền cơ bản theo nguyên tắc Least Privilege.
+- Thiết lập AWS Budgets để theo dõi và hạn chế phát sinh chi phí ngoài dự kiến.
+- Xác định định hướng cá nhân tập trung vào triển khai hạ tầng, mạng Cloud và tích hợp các dịch vụ AWS cho dự án Smart Attendance SaaS.

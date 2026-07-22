@@ -1,95 +1,119 @@
 ---
-title : "VPC Endpoint Policies"
-date : 2024-01-01
-weight : 5
-chapter : false
-pre : " <b> 5.5 </b> "
+title: "Kiểm thử, bảo mật và giám sát"
+date: 2026-07-22
+weight: 5
+chapter: false
+pre: "<b>5.5. </b>"
 ---
 
-Khi bạn tạo một Interface Endpoint  hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.
+# Kiểm thử, bảo mật và giám sát
 
-Bạn có thể tạo chính sách chỉ hạn chế quyền truy cập vào các S3 bucket cụ thể. Điều này hữu ích nếu bạn chỉ muốn một số Bộ chứa S3 nhất định có thể truy cập được thông qua điểm cuối.
+## 1. Danh sách kiểm thử chức năng
 
-Trong phần này, bạn sẽ tạo chính sách VPC Endpoint hạn chế quyền truy cập vào S3 bucket được chỉ định trong chính sách VPC Endpoint.
+| Trường hợp | Kết quả mong đợi |
+|---|---|
+| Đăng nhập đúng | Nhận token và vào Dashboard |
+| Đăng nhập sai | Hiển thị lỗi, không lưu token |
+| Gọi API không có JWT | 401 hoặc 403 |
+| Clock-in lần đầu | Tạo bản ghi |
+| Clock-in trùng | Bị từ chối |
+| Clock-out chưa Clock-in | Bị từ chối |
+| Xem lịch sử | Chỉ thấy dữ liệu đúng người dùng/tenant |
+| Cập nhật Profile | Dữ liệu được kiểm tra và cập nhật |
+| Export Report | Tạo file hoặc đưa task vào queue |
 
-![endpoint diagram](/images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
+## 2. Kiểm tra Tenant Isolation
 
-#### Kết nối tới EC2 và xác minh kết nối tới S3. 
+Backend không được chỉ tin `tenantId` từ body request. Tenant cần được lấy từ:
 
-1. Bắt đầu một phiên AWS Session Manager mới trên máy chủ có tên là Test-Gateway-Endpoint. Từ phiên này, xác minh rằng bạn có thể liệt kê nội dung của bucket mà bạn đã tạo trong Phần 1: Truy cập S3 từ VPC.
+- Cognito custom claim.
+- User profile đã được xác minh.
+- Bảng mapping người dùng–tenant.
+- Authorizer context.
 
+Mọi truy vấn DynamoDB phải chứa tenant key phù hợp.
+
+## 3. Kiểm tra IAM
+
+Mỗi Lambda chỉ nên có quyền cần thiết:
+
+- Clock-in/Clock-out: đọc và ghi Attendance.
+- Profile: đọc/ghi dữ liệu Profile.
+- Report: đọc dữ liệu, ghi S3 hoặc gửi message.
+- Email Worker: nhận SQS và gửi SES.
+- Admin: quyền quản trị có giới hạn rõ ràng.
+
+Không dùng policy `Action: "*"` và `Resource: "*"` trong môi trường Production nếu có thể giới hạn.
+
+## 4. Kiểm tra dữ liệu nhạy cảm
+
+- Không commit `.env`.
+- Không commit Access Key.
+- Dùng Secrets Manager cho API key hoặc credential.
+- Dùng KMS cho dữ liệu cần customer-managed key.
+- Không ghi token đầy đủ vào log.
+- Không trả stack trace cho Client.
+
+## 5. CloudWatch
+
+Theo dõi:
+
+### API Gateway
+
+- Count
+- 4XX
+- 5XX
+- Latency
+- IntegrationLatency
+
+### Lambda
+
+- Invocations
+- Errors
+- Duration
+- Throttles
+- ConcurrentExecutions
+
+### DynamoDB
+
+- SuccessfulRequestLatency
+- ThrottledRequests
+- SystemErrors
+- ConsumedReadCapacityUnits
+- ConsumedWriteCapacityUnits
+
+## 6. Xem log
+
+```powershell
+aws logs describe-log-groups `
+  --log-group-name-prefix "/aws/lambda/"
 ```
-aws s3 ls s3://<your-bucket-name>
-```
-![test](/images/5-Workshop/5.5-Policy/test1.png)
 
-Nội dung của bucket bao gồm hai tệp có dung lượng 1GB đã được tải lên trước đó.
+Tail log bằng SAM:
 
-2. Tạo một bucket S3 mới; tuân thủ mẫu đặt tên mà bạn đã sử dụng trong Phần 1, nhưng thêm '-2' vào tên. Để các trường khác là mặc định và nhấp vào **Create**.
-
-![create bucket](/images/5-Workshop/5.5-Policy/create-bucket.png)
-
-3. Tạo bucket thành công.
-
-![Success](/images/5-Workshop/5.5-Policy/create-bucket-success.png)
-
-Policy mặc định cho phép truy cập vào tất cả các S3 Buckets thông qua VPC endpoint.
-
-4. Trong giao diện **Edit Policy**, sao chép và dán theo policy sau, thay thế yourbucketname-2 với tên bucket thứ hai của bạn. Policy này sẽ cho phép truy cập đến bucket mới thông qua VPC endpoint, nhưng không cho phép truy cập đến các bucket còn lại. Chọn **Save** để kích hoạt policy.
-
-
-```
-{
-  "Id": "Policy1631305502445",
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1631305501021",
-      "Action": "s3:*",
-      "Effect": "Allow",
-      "Resource": [
-      				"arn:aws:s3:::yourbucketname-2",
-       				"arn:aws:s3:::yourbucketname-2/*"
-       ],
-      "Principal": "*"
-    }
-  ]
-}
+```powershell
+sam logs `
+  --stack-name smart-attendance-saas `
+  --name TEN_LOGICAL_FUNCTION `
+  --tail
 ```
 
-![custom policy](/images/5-Workshop/5.5-Policy/policy2.png)
+## 7. Kiểm tra hàng đợi
 
-Cấu hình policy thành công.
+Nếu sử dụng SQS:
 
-![success](/images/5-Workshop/5.5-Policy/success.png)
+- Kiểm tra `ApproximateNumberOfMessagesVisible`.
+- Kiểm tra DLQ.
+- Kiểm tra Lambda Event Source Mapping.
+- Kiểm tra retry và idempotency.
 
-5. Từ session của bạn trên Test-Gateway-Endpoint instance, kiểm tra truy cập đến S3 bucket bạn tạo ở bước đầu
+## 8. Các lớp bảo vệ nâng cao
 
-```
-aws s3 ls s3://<yourbucketname>
-```
+Kiến trúc tổng thể có thể bổ sung:
 
-Câu lệnh trả về lỗi bởi vì truy cập vào S3 bucket không có quyền trong VPC endpoint policy.
-
-![error](/images/5-Workshop/5.5-Policy/error.png)
-
-6. Trở lại home directory của bạn trên EC2 instance ```cd~```
-
-+ Tạo file ```fallocate -l 1G test-bucket2.xyz ```
-+ Sao chép file lên bucket thứ  2 ```aws s3 cp test-bucket2.xyz s3://<your-2nd-bucket-name>```
-
-![success](/images/5-Workshop/5.5-Policy/test2.png)
-
-Thao tác này được cho phép bởi VPC endpoint policy.
-
-![success](/images/5-Workshop/5.5-Policy/test2-success.png)
-
-Sau đó chúng ta kiểm tra truy cập vào S3 bucket đầu tiên
-
- ```aws s3 cp test-bucket2.xyz s3://<your-1st-bucket-name>```
-
- ![fail](/images/5-Workshop/5.5-Policy/test2-fail.png)
-
- Câu lệnh xảy ra lỗi bởi vì bucket không có quyền truy cập bởi VPC endpoint policy.
-
-Trong phần này, bạn đã tạo chính sách VPC Endpoint cho Amazon S3 và sử dụng AWS CLI để kiểm tra chính sách. Các hoạt động AWS CLI liên quan đến bucket S3 ban đầu của bạn thất bại vì bạn áp dụng một chính sách chỉ cho phép truy cập đến bucket thứ hai mà bạn đã tạo. Các hoạt động AWS CLI nhắm vào bucket thứ hai của bạn thành công vì chính sách cho phép chúng. Những chính sách này có thể hữu ích trong các tình huống khi bạn cần kiểm soát quyền truy cập vào tài nguyên thông qua VPC Endpoint.
+- AWS WAF trước CloudFront/API.
+- AWS Shield cho bảo vệ DDoS.
+- Security Hub để tổng hợp trạng thái bảo mật.
+- GuardDuty để phát hiện hành vi bất thường.
+- X-Ray để truy vết request.
+- CloudTrail để kiểm toán thao tác quản trị.

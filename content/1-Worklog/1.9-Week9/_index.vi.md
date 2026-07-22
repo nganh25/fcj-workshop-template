@@ -1,59 +1,46 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 9
 chapter: false
-pre: " <b> 1.9. </b> "
+pre: "<b>1.9. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 9
 
-### Mục tiêu tuần 9:
+### Mục tiêu định hướng trong tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Hoàn thiện lớp dữ liệu của Smart Attendance SaaS.
+- Áp dụng Single-Table Design trên Amazon DynamoDB.
+- Xây dựng chức năng báo cáo và xuất dữ liệu.
+- Lưu trữ tệp báo cáo trên Amazon S3.
+- Triển khai quy trình xử lý bất đồng bộ bằng AWS Step Functions và Amazon SQS.
+- Tìm hiểu DynamoDB Streams và kiến trúc Event-Driven.
+- Xây dựng hệ thống gửi thông báo qua Amazon SES.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Hoàn thiện thiết kế DynamoDB theo mô hình Single-Table Design; tổ chức dữ liệu Tenant, User, Attendance và Report bằng Partition Key và Sort Key. | 15/06/2026 | 15/06/2026 | DynamoDB Data Modeling |
+| Thứ Ba | Xây dựng Lambda Report và Report Export; thực hiện truy vấn dữ liệu điểm danh, tổng hợp kết quả và xuất tệp CSV hoặc Excel. | 16/06/2026 | 16/06/2026 | AWS Lambda và Node.js Documentation |
+| Thứ Tư | Tạo S3 Bucket lưu trữ báo cáo; thiết lập đường dẫn lưu tệp theo Tenant và thời gian; tìm hiểu S3 Intelligent-Tiering để tối ưu chi phí lưu trữ. | 17/06/2026 | 17/06/2026 | Amazon S3 Documentation |
+| Thứ Năm | Thiết kế quy trình xử lý báo cáo bất đồng bộ bằng AWS Step Functions và Amazon SQS; cấu hình Dead-Letter Queue để lưu các yêu cầu xử lý thất bại. | 18/06/2026 | 18/06/2026 | Step Functions và Amazon SQS Documentation |
+| Thứ Sáu | Kích hoạt DynamoDB Streams; kết nối EventBridge, SQS Email Queue, Lambda Email Worker và Amazon SES để gửi thông báo báo cáo hoặc trạng thái điểm danh. | 19/06/2026 | 19/06/2026 | EventBridge và Amazon SES Documentation |
 
-### Kết quả đạt được tuần 9:
+### Kết quả thu hoạch thực tế sau Tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hoàn thiện mô hình dữ liệu Single-Table Design trên Amazon DynamoDB.
+- Dữ liệu của từng tổ chức được phân tách thông qua Tenant ID.
+- Tối ưu truy vấn bằng cách lựa chọn Partition Key, Sort Key và các chỉ mục phù hợp.
+- Xây dựng Lambda Report để truy vấn và tổng hợp dữ liệu điểm danh.
+- Phát triển chức năng xuất báo cáo dưới định dạng CSV hoặc Excel.
+- Lưu trữ tệp báo cáo trên Amazon S3 theo từng Tenant.
+- Hiểu cách sử dụng S3 Intelligent-Tiering để tự động tối ưu chi phí lưu trữ.
+- Xây dựng luồng xử lý báo cáo bất đồng bộ bằng Step Functions.
+- Sử dụng Amazon SQS để tiếp nhận và điều phối các yêu cầu xuất báo cáo.
+- Cấu hình Dead-Letter Queue để hạn chế mất dữ liệu khi xử lý lỗi.
+- Kích hoạt DynamoDB Streams để ghi nhận sự thay đổi dữ liệu.
+- Sử dụng EventBridge để định tuyến sự kiện đến hệ thống thông báo.
+- Xây dựng Lambda Email Worker để nhận Message từ SQS và gửi Email thông qua Amazon SES.
+- Hiểu được sự khác nhau giữa xử lý đồng bộ và xử lý bất đồng bộ trong hệ thống Cloud.

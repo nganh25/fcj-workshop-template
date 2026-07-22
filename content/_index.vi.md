@@ -28,8 +28,19 @@ chapter: false
 
 ## Ảnh đại diện
 
-<div align="center">
-    <img src="/fcj-workshop-template/images/avatar.jpg" width="220"/>
+<div style="text-align: center;">
+  <img
+    src="images/avatar.jpg"
+    alt="Ảnh đại diện Nguyễn Trung Anh"
+    style="
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid #294867;
+    "
+  >
 </div>
 
 ---

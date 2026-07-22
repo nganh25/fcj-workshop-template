@@ -1,59 +1,39 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+date: 2026-04-27
+weight: 2
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: "<b>1.2. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 2
 
-### Mục tiêu tuần 2:
+### Mục tiêu định hướng trong tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu nhóm dịch vụ tính toán Compute trên AWS.
+- Thực hành khởi tạo, cấu hình và kết nối Amazon EC2.
+- Tìm hiểu các loại lưu trữ gắn với máy chủ như Amazon EBS và Amazon EFS.
+- Nghiên cứu cơ chế tự động mở rộng hệ thống bằng Auto Scaling.
+- Làm quen với Amazon CloudWatch để giám sát tài nguyên và thiết lập cảnh báo.
+- Đánh giá sự khác nhau giữa kiến trúc sử dụng máy chủ EC2 và kiến trúc Serverless dự kiến áp dụng cho Smart Attendance SaaS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tìm hiểu Amazon EC2, các loại Instance, Amazon Machine Image, Key Pair, Security Group và quy trình khởi tạo một máy chủ ảo trên AWS. | 27/04/2026 | 27/04/2026 | Amazon EC2 Documentation |
+| Thứ Ba | Thực hành tạo EC2 Instance, kết nối bằng SSH, cài đặt Web Server và kiểm tra khả năng truy cập ứng dụng từ Internet. | 28/04/2026 | 28/04/2026 | AWS EC2 Workshop |
+| Thứ Tư | Tìm hiểu Amazon EBS và Amazon EFS; thực hành tạo Volume, gắn Volume vào EC2 và kiểm tra khả năng lưu trữ dữ liệu. | 29/04/2026 | 29/04/2026 | Amazon EBS và EFS Documentation |
+| Thứ Năm | Nghiên cứu Launch Template, Auto Scaling Group và Elastic Load Balancing; tìm hiểu cơ chế tự động tăng hoặc giảm số lượng máy chủ theo tải hệ thống. | 30/04/2026 | 30/04/2026 | AWS Auto Scaling Documentation |
+| Thứ Sáu | Sử dụng Amazon CloudWatch để theo dõi CPU, Network và trạng thái EC2; tạo CloudWatch Alarm; so sánh EC2 với AWS Lambda trong kiến trúc Smart Attendance SaaS. | 01/05/2026 | 01/05/2026 | Amazon CloudWatch Documentation |
 
-### Kết quả đạt được tuần 2:
+### Kết quả thu hoạch thực tế sau Tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được vai trò của Amazon EC2 trong việc cung cấp tài nguyên máy chủ ảo trên AWS.
+- Khởi tạo và kết nối thành công EC2 Instance bằng SSH.
+- Cài đặt thử nghiệm Web Server và kiểm tra ứng dụng hoạt động trên môi trường Cloud.
+- Phân biệt được đặc điểm của Amazon EBS và Amazon EFS.
+- Hiểu nguyên lý hoạt động của Launch Template, Elastic Load Balancing và Auto Scaling Group.
+- Biết cách theo dõi các chỉ số cơ bản của máy chủ thông qua Amazon CloudWatch.
+- Thiết lập được cảnh báo khi chỉ số CPU vượt quá ngưỡng cấu hình.
+- Nhận thấy kiến trúc EC2 phù hợp với ứng dụng cần máy chủ hoạt động liên tục, trong khi kiến trúc Serverless phù hợp hơn với Smart Attendance SaaS ở giai đoạn MVP nhờ khả năng tự động mở rộng và tối ưu chi phí.

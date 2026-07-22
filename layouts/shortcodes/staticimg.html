@@ -1,0 +1,11 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default "100%" -}}
+<div style="text-align:center; margin:1.5rem 0;">
+  <img
+    src="{{ $src | relURL }}"
+    alt="{{ $alt }}"
+    style="width:{{ $width }}; max-width:100%; height:auto;"
+    loading="lazy"
+  >
+</div>

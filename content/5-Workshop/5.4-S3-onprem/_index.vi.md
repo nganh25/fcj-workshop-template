@@ -1,20 +1,147 @@
 ---
-title : "Truy cập S3 từ môi trường truyền thống"
-date : 2024-01-01 
-weight : 4 
-chapter : false
-pre : " <b> 5.4. </b> "
+title: "Tích hợp Frontend, Cognito và API"
+date: 2026-07-22
+weight: 4
+chapter: false
+pre: "<b>5.4. </b>"
 ---
 
-#### Tổng quan
+# Tích hợp Frontend, Cognito và API
 
-+ Trong phần này, bạn sẽ tạo một Interface Endpoint để truy cập Amazon S3 từ môi trường truyền thống mô phỏng. Interface Endpoint sẽ cho phép bạn định tuyến đến Amazon S3 qua kết nối VPN từ môi trường truyền thống mô phỏng của bạn.
+> Tên thư mục cũ được giữ nguyên để tránh thay đổi URL. Nội dung đã được cập nhật theo Smart Attendance SaaS.
 
-+ Tại sao nên sử dụng **Interface Endpoint**:
-    + Các Gateway endpoints chỉ hoạt động với các tài nguyên đang chạy trong VPC nơi chúng được tạo. Interface Endpoint  hoạt động với tài nguyên chạy trong VPC và cả tài nguyên chạy trong môi trường truyền thống. Khả năng kết nối từ môi trường truyền thống của bạn với aws cloud có thể được cung cấp bởi AWS Site-to-Site VPN hoặc AWS Direct Connect.
-    + Interface Endpoint cho phép bạn kết nối với các dịch vụ do AWS PrivateLink cung cấp. Các dịch vụ này bao gồm một số dịch vụ AWS, dịch vụ do các đối tác và khách hàng AWS lưu trữ trong VPC của riêng họ (gọi tắt là Dịch vụ PrivateLink endpoints) và các dịch vụ Đối tác AWS Marketplace. Đối với workshop này, chúng ta sẽ tập trung vào việc kết nối với Amazon S3.
-    
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+## 1. Cấu hình Frontend
 
+Tạo hoặc cập nhật file biến môi trường:
 
+```text
+frontend/.env
+```
 
+Ví dụ với Vite:
+
+```env
+VITE_API_URL=https://YOUR_API_ID.execute-api.ap-southeast-1.amazonaws.com
+VITE_AWS_REGION=ap-southeast-1
+VITE_COGNITO_USER_POOL_ID=ap-southeast-1_xxxxxxxxx
+VITE_COGNITO_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+Không đặt `AWS_SECRET_ACCESS_KEY` trong Frontend.
+
+## 2. Vai trò của AuthContext
+
+File:
+
+```text
+frontend/src/context/AuthContext.jsx
+```
+
+AuthContext nên quản lý:
+
+- Trạng thái người dùng hiện tại.
+- Loading state.
+- Đăng nhập.
+- Đăng xuất.
+- Token hiện tại.
+- Làm mới token.
+- Kiểm tra nhóm hoặc vai trò người dùng.
+
+## 3. Đính kèm JWT vào API
+
+File:
+
+```text
+frontend/src/utils/api.js
+```
+
+Mỗi request đã xác thực cần header:
+
+```http
+Authorization: Bearer ACCESS_TOKEN
+Content-Type: application/json
+```
+
+Ví dụ:
+
+```javascript
+export async function apiRequest(path, options = {}) {
+  const token = localStorage.getItem("accessToken");
+
+  const response = await fetch(`${import.meta.env.VITE_API_URL}${path}`, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...options.headers,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`API error: ${response.status}`);
+  }
+
+  return response.json();
+}
+```
+
+Không sử dụng đoạn mẫu nếu `AuthContext.jsx` của project đã có cơ chế lưu token khác. Hãy dùng cùng một nguồn token trong toàn ứng dụng.
+
+## 4. Kiểm thử Clock-in
+
+```javascript
+await apiRequest("/attendance/checkin", {
+  method: "POST",
+  body: JSON.stringify({
+    method: "web",
+  }),
+});
+```
+
+Backend phải lấy danh tính chính từ JWT thay vì tin hoàn toàn vào `userId` do Client gửi.
+
+## 5. Kiểm thử Clock-out và History
+
+```javascript
+await apiRequest("/attendance/checkout", {
+  method: "POST",
+});
+
+const history = await apiRequest("/attendance");
+```
+
+Route thực tế phải khớp với `backend/template.yaml`.
+
+## 6. Build Frontend
+
+```powershell
+cd C:\Users\nguye\smart-attendance-saas\frontend
+npm install
+npm run build
+```
+
+Thư mục kết quả thường là:
+
+```text
+dist
+```
+
+## 7. Upload lên Amazon S3
+
+```powershell
+aws s3 sync .\dist s3://TEN_BUCKET --delete
+```
+
+Giữ bucket ở chế độ private khi phân phối qua CloudFront Origin Access Control.
+
+## 8. Cập nhật CloudFront
+
+Sau khi upload phiên bản mới:
+
+```powershell
+aws cloudfront create-invalidation `
+  --distribution-id DISTRIBUTION_ID `
+  --paths "/*"
+```
+
+Đối với React Router, cấu hình CloudFront trả `index.html` cho lỗi 403/404 để tải lại các route như `/dashboard`.

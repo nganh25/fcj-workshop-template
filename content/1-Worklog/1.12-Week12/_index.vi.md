@@ -1,58 +1,63 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2026-07-06
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: "<b>1.12. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+# Worklog Tuần 12
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu định hướng trong tuần 12:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Rà soát và hoàn thiện toàn bộ dự án Smart Attendance SaaS.
+- Kiểm tra tính ổn định, bảo mật và khả năng mở rộng của hệ thống.
+- Tối ưu hiệu năng và chi phí các dịch vụ AWS.
+- Hoàn thiện tài liệu kiến trúc và tài liệu hướng dẫn triển khai.
+- Chuẩn bị kịch bản Demo và bài thuyết trình dự án.
+- Đánh giá kết quả đạt được so với mục tiêu ban đầu.
+- Tổng kết kiến thức và kinh nghiệm trong chương trình First Cloud Journey.
 
+### Nhiệm vụ cụ thể cần triển khai:
 
-### Kết quả đạt được tuần 12:
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Kiểm tra toàn bộ kiến trúc; xác minh kết nối giữa Route 53, CloudFront, S3, Cognito, API Gateway, Lambda, DynamoDB và các dịch vụ xử lý sự kiện. | 06/07/2026 | 06/07/2026 | Sơ đồ kiến trúc dự án |
+| Thứ Ba | Tối ưu Lambda Memory, Timeout và Dependency; rà soát DynamoDB Capacity, S3 Lifecycle, CloudFront Cache và số lượng Log lưu trữ. | 07/07/2026 | 07/07/2026 | AWS Cost Optimization |
+| Thứ Tư | Kiểm tra bảo mật lần cuối; rà soát AWS WAF, Secrets Manager, KMS, IAM Policy, Tenant Isolation, Security Hub và GuardDuty. | 08/07/2026 | 08/07/2026 | AWS Security Best Practices |
+| Thứ Năm | Hoàn thiện tài liệu dự án, sơ đồ kiến trúc, mô tả luồng xử lý, hướng dẫn triển khai, báo cáo thực tập và nội dung Worklog trên website Hugo. | 09/07/2026 | 09/07/2026 | Tài liệu dự án của nhóm |
+| Thứ Sáu | Chuẩn bị và thực hiện Demo; trình bày kiến trúc, chức năng chính, kết quả đạt được, khó khăn, giải pháp và định hướng phát triển trong tương lai. | 10/07/2026 | 10/07/2026 | Nội dung thuyết trình dự án |
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả thu hoạch thực tế sau Tuần 12:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+- Hoàn thành phiên bản MVP của hệ thống Smart Attendance SaaS.
+- Hoàn thiện giao diện React SPA dành cho người quản lý và nhân viên.
+- Hoàn thiện chức năng đăng ký, đăng nhập và xác thực bằng Amazon Cognito.
+- Hoàn thiện API Clock-in, Clock-out, Attendance, Report, Profile và Admin.
+- Triển khai Backend theo kiến trúc Serverless bằng API Gateway và AWS Lambda.
+- Lưu trữ dữ liệu theo mô hình Single-Table Design trên Amazon DynamoDB.
+- Áp dụng Tenant Isolation để hỗ trợ nhiều tổ chức sử dụng chung hệ thống.
+- Hoàn thiện chức năng xuất báo cáo và lưu trữ tệp trên Amazon S3.
+- Triển khai xử lý bất đồng bộ bằng Step Functions, SQS và Dead-Letter Queue.
+- Xây dựng luồng Event-Driven bằng DynamoDB Streams, EventBridge, Lambda và Amazon SES.
+- Phân phối Frontend bằng Amazon CloudFront và Amazon S3.
+- Bảo vệ hệ thống bằng AWS WAF, AWS Shield, Cognito, IAM, Secrets Manager và AWS KMS.
+- Thiết lập CI/CD bằng CloudFormation, CodePipeline và CodeBuild.
+- Thiết lập Logging, Monitoring và Tracing bằng CloudWatch và AWS X-Ray.
+- Rà soát chi phí và tối ưu cấu hình tài nguyên theo nhu cầu thực tế.
+- Hoàn thiện tài liệu kỹ thuật, sơ đồ kiến trúc, báo cáo và nội dung Workshop.
+- Nâng cao kiến thức về AWS Serverless, Cloud Infrastructure, Cloud Security, DevOps và kiến trúc Event-Driven.
+- Cải thiện kỹ năng làm việc nhóm, quản lý mã nguồn, xử lý lỗi và trình bày dự án.
+- Hoàn thành mục tiêu của chương trình Workforce Bootcamp – First Cloud Journey.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+### Kiến trúc tổng thể của Smart Attendance SaaS
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+![Kiến trúc Smart Attendance SaaS](/images/architecture/smart-attendance-architecture.jpg)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+Sơ đồ kiến trúc thể hiện hệ thống Smart Attendance SaaS được xây dựng theo mô hình Serverless và Event-Driven trên AWS. Giao diện React SPA được lưu trữ trên Amazon S3 và phân phối thông qua Amazon CloudFront. Amazon Route 53 thực hiện phân giải tên miền, trong khi AWS WAF và AWS Shield bảo vệ ứng dụng tại lớp biên.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+Người dùng được xác thực bằng Amazon Cognito. Các yêu cầu có JWT Token hợp lệ được gửi đến Amazon API Gateway và chuyển tiếp đến các AWS Lambda Function xử lý nghiệp vụ như Clock-in, Clock-out, Attendance, Report, Admin và Subscription.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+Dữ liệu được lưu trữ trong Amazon DynamoDB theo mô hình Single-Table Design và được mã hóa bằng AWS KMS. Các tác vụ cần nhiều thời gian được xử lý bất đồng bộ thông qua AWS Step Functions, Amazon SQS và Dead-Letter Queue. DynamoDB Streams, Amazon EventBridge, Lambda Email Worker và Amazon SES được sử dụng để xây dựng luồng thông báo theo kiến trúc Event-Driven.
 
-
+Hệ thống được triển khai tự động bằng AWS CloudFormation, CodePipeline và CodeBuild. Amazon CloudWatch và AWS X-Ray hỗ trợ ghi log, giám sát, cảnh báo và truy vết yêu cầu trong toàn bộ ứng dụng.

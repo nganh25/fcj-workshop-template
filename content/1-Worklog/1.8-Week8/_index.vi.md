@@ -1,59 +1,45 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 8
 chapter: false
-pre: " <b> 1.8. </b> "
+pre: "<b>1.8. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 8
 
-### Mục tiêu tuần 8:
+### Mục tiêu định hướng trong tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Triển khai lớp API và Compute cho Smart Attendance SaaS.
+- Xây dựng Amazon API Gateway HTTP API v2.
+- Cấu hình JWT Authorizer sử dụng Amazon Cognito.
+- Phát triển các Lambda Function xử lý nghiệp vụ điểm danh.
+- Triển khai chức năng Clock-in, Clock-out, quản lý hồ sơ và quản trị hệ thống.
+- Kết nối Lambda với Amazon DynamoDB.
+- Kiểm tra luồng xử lý đồng bộ từ Frontend đến API và cơ sở dữ liệu.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Khởi tạo Amazon API Gateway HTTP API v2; thiết kế các Route cho đăng nhập, hồ sơ người dùng, Clock-in, Clock-out, lịch sử điểm danh, báo cáo và quản trị. | 08/06/2026 | 08/06/2026 | Amazon API Gateway Documentation |
+| Thứ Ba | Cấu hình JWT Authorizer cho API Gateway; kết nối với Cognito User Pool; kiểm tra yêu cầu có Token hợp lệ và yêu cầu không có Token. | 09/06/2026 | 09/06/2026 | API Gateway JWT Authorizer |
+| Thứ Tư | Xây dựng Lambda Clock-in và Clock-out; xử lý thời gian điểm danh, thông tin người dùng, Tenant và kiểm tra bản ghi trùng lặp. | 10/06/2026 | 10/06/2026 | AWS Lambda Documentation |
+| Thứ Năm | Xây dựng Lambda Attendance, Profile Update và Admin; xử lý truy vấn lịch sử điểm danh, cập nhật hồ sơ và các thao tác quản trị người dùng. | 11/06/2026 | 11/06/2026 | Node.js và AWS SDK Documentation |
+| Thứ Sáu | Kết nối các Lambda Function với DynamoDB; kiểm thử toàn bộ luồng Frontend → CloudFront → API Gateway → Lambda → DynamoDB. | 12/06/2026 | 12/06/2026 | DynamoDB Developer Guide |
 
-### Kết quả đạt được tuần 8:
+### Kết quả thu hoạch thực tế sau Tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Tạo thành công Amazon API Gateway HTTP API v2.
+- Xây dựng các API Route chính cho hệ thống Smart Attendance SaaS.
+- Cấu hình JWT Authorizer để xác thực Access Token được cấp bởi Amazon Cognito.
+- Chặn được các yêu cầu không có Token hoặc sử dụng Token không hợp lệ.
+- Phát triển Lambda Clock-in để ghi nhận thời gian bắt đầu làm việc.
+- Phát triển Lambda Clock-out để ghi nhận thời gian kết thúc làm việc.
+- Xây dựng Lambda Attendance để truy vấn và tổng hợp lịch sử điểm danh.
+- Xây dựng Lambda Profile Update để cập nhật thông tin người dùng.
+- Xây dựng Lambda Admin phục vụ các chức năng quản trị.
+- Kết nối thành công Lambda với Amazon DynamoDB thông qua AWS SDK.
+- Triển khai logic phân tách dữ liệu theo Tenant nhằm hỗ trợ mô hình SaaS đa tổ chức.
+- Kiểm tra thành công luồng xử lý đồng bộ từ giao diện đến cơ sở dữ liệu.
+- Hiểu rõ vai trò của API Gateway trong việc định tuyến, xác thực và chuyển tiếp yêu cầu đến các Lambda Function.

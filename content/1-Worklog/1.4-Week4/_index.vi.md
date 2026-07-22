@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-05-11
+weight: 4
 chapter: false
-pre: " <b> 1.4. </b> "
+pre: "<b>1.4. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 4
 
-### Mục tiêu tuần 4:
+### Mục tiêu định hướng trong tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu các dịch vụ lưu trữ và cơ sở dữ liệu phổ biến trên AWS.
+- Nắm được cách hoạt động của Amazon S3, Amazon RDS và Amazon DynamoDB.
+- Thực hành tạo Bucket, quản lý Object và cấu hình quyền truy cập trên Amazon S3.
+- Tìm hiểu mô hình cơ sở dữ liệu quan hệ và cơ sở dữ liệu NoSQL.
+- So sánh Amazon RDS với Amazon DynamoDB để lựa chọn giải pháp phù hợp cho dự án Smart Attendance SaaS.
+- Tìm hiểu cơ chế sao lưu, mã hóa và bảo vệ dữ liệu trên AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tìm hiểu Amazon S3, cấu trúc Bucket và Object, các lớp lưu trữ, tính năng Versioning và Lifecycle Policy. | 11/05/2026 | 11/05/2026 | Amazon S3 Documentation |
+| Thứ Ba | Thực hành tạo S3 Bucket, tải tệp lên Bucket, cấu hình quyền truy cập, Bucket Policy, mã hóa và kiểm tra khả năng truy xuất dữ liệu. | 12/05/2026 | 12/05/2026 | AWS S3 Workshop |
+| Thứ Tư | Tìm hiểu Amazon RDS, các hệ quản trị cơ sở dữ liệu được hỗ trợ, Multi-AZ, Read Replica, Backup và Snapshot. | 13/05/2026 | 13/05/2026 | Amazon RDS Documentation |
+| Thứ Năm | Tìm hiểu Amazon DynamoDB, Partition Key, Sort Key, Global Secondary Index, cơ chế đọc ghi và khả năng tự động mở rộng. | 14/05/2026 | 14/05/2026 | Amazon DynamoDB Documentation |
+| Thứ Sáu | So sánh Amazon RDS và DynamoDB; thiết kế mô hình dữ liệu ban đầu cho User, Class, Attendance Session và Attendance Record của Smart Attendance SaaS. | 15/05/2026 | 15/05/2026 | AWS Database Documentation |
 
-### Kết quả đạt được tuần 4:
+### Kết quả thu hoạch thực tế sau Tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được cách Amazon S3 lưu trữ và quản lý dữ liệu dưới dạng Object.
+- Tạo và cấu hình thành công S3 Bucket phục vụ việc lưu trữ tệp thử nghiệm.
+- Biết cách sử dụng Bucket Policy, Versioning, Lifecycle Policy và mã hóa dữ liệu.
+- Nắm được đặc điểm của cơ sở dữ liệu quan hệ trên Amazon RDS.
+- Hiểu vai trò của Multi-AZ, Read Replica, Snapshot và cơ chế sao lưu tự động.
+- Hiểu được mô hình NoSQL của Amazon DynamoDB và cách lựa chọn Partition Key, Sort Key.
+- Phân biệt được trường hợp sử dụng Amazon RDS và Amazon DynamoDB.
+- Lựa chọn DynamoDB làm cơ sở dữ liệu chính cho Smart Attendance SaaS vì phù hợp với kiến trúc Serverless, khả năng mở rộng tự động và mô hình thanh toán theo nhu cầu sử dụng.
+- Hoàn thành mô hình dữ liệu sơ bộ cho người dùng, lớp học, phiên điểm danh và lịch sử điểm danh.

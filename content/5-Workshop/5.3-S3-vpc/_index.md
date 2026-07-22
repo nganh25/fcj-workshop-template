@@ -1,18 +1,11 @@
 ---
-title : "Access S3 from VPC"
-date : 2024-01-01
-weight : 3
-chapter : false
-pre : " <b> 5.3. </b> "
+title: "Run and deploy the Backend"
+date: 2026-07-22
+weight: 3
+chapter: false
+pre: "<b>5.3. </b>"
 ---
 
-#### Using Gateway endpoint
+# Run and deploy the Backend
 
-In this section, you will create **a Gateway eendpoint** to access **Amazon S3** from **an EC2 instance**. **The Gateway endpoint** will allow upload an object to S3 buckets without using **the Public Internet**. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.
-
-![overview](/images/5-Workshop/5.3-S3-vpc/diagram2.png)
-
-#### Content
-
-- [Create gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+Run `node server.js` locally, validate and build `template.yaml`, deploy with `sam deploy --guided`, retrieve CloudFormation outputs, test the API, and inspect Lambda logs.

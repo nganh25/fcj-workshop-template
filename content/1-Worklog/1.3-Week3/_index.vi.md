@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: "<b>1.3. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 3
 
-### Mục tiêu tuần 3:
+### Mục tiêu định hướng trong tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu chuyên sâu về hệ thống mạng trên AWS.
+- Nắm được cấu trúc và vai trò của Amazon Virtual Private Cloud.
+- Thực hành thiết kế Public Subnet, Private Subnet, Route Table, Internet Gateway và NAT Gateway.
+- Phân biệt Security Group với Network Access Control List.
+- Tìm hiểu Amazon Route 53, Elastic Load Balancing và các phương thức kết nối giữa nhiều mạng VPC.
+- Vận dụng kiến thức mạng để chuẩn bị thiết kế hạ tầng cho Smart Attendance SaaS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tìm hiểu Amazon VPC, dải địa chỉ CIDR, Public Subnet, Private Subnet và nguyên tắc phân chia mạng theo từng Availability Zone. | 04/05/2026 | 04/05/2026 | Amazon VPC Documentation |
+| Thứ Ba | Thực hành tạo VPC, Subnet, Route Table và Internet Gateway; cấu hình đường đi để EC2 trong Public Subnet có thể kết nối Internet. | 05/05/2026 | 05/05/2026 | AWS Networking Workshop |
+| Thứ Tư | Tìm hiểu NAT Gateway, Security Group và Network ACL; so sánh cơ chế Stateful và Stateless trong quá trình kiểm soát lưu lượng mạng. | 06/05/2026 | 06/05/2026 | AWS VPC Security Documentation |
+| Thứ Năm | Nghiên cứu Elastic Load Balancing, Amazon Route 53, VPC Peering và Transit Gateway; tìm hiểu cách phân phối lưu lượng và liên kết các hệ thống mạng độc lập. | 07/05/2026 | 07/05/2026 | Route 53 và VPC Peering Documentation |
+| Thứ Sáu | Tìm hiểu VPC Endpoint và AWS Systems Manager Session Manager; phác thảo luồng mạng dự kiến cho Smart Attendance SaaS; tổng kết kiến thức trong tuần. | 08/05/2026 | 08/05/2026 | AWS Systems Manager Documentation |
 
-### Kết quả đạt được tuần 3:
+### Kết quả thu hoạch thực tế sau Tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được vai trò của Amazon VPC trong việc xây dựng một môi trường mạng riêng biệt trên AWS.
+- Biết cách lựa chọn dải CIDR và phân chia Public Subnet, Private Subnet theo từng Availability Zone.
+- Tạo và cấu hình thành công VPC, Subnet, Route Table và Internet Gateway.
+- Hiểu cách NAT Gateway hỗ trợ tài nguyên trong Private Subnet kết nối ra Internet mà không cho phép truy cập trực tiếp từ bên ngoài.
+- Phân biệt được Security Group và Network ACL về phạm vi áp dụng, trạng thái kết nối và cơ chế thiết lập luật.
+- Hiểu vai trò của Route 53 trong quản lý tên miền và định tuyến người dùng đến ứng dụng.
+- Nắm được kiến thức cơ bản về VPC Peering, Transit Gateway và VPC Endpoint.
+- Hoàn thành bản phác thảo luồng kết nối giữa người dùng, Frontend, API Gateway, Lambda và DynamoDB cho Smart Attendance SaaS.
+- Củng cố kiến thức phù hợp với vai trò Cloud Infrastructure và Cloud Networking trong nhóm dự án.

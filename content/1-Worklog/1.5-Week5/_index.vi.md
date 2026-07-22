@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 5
 chapter: false
-pre: " <b> 1.5. </b> "
+pre: "<b>1.5. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+# Worklog Tuần 5
 
-### Mục tiêu tuần 5:
+### Mục tiêu định hướng trong tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu kiến trúc Serverless trên AWS.
+- Nắm được cách hoạt động của AWS Lambda và Amazon API Gateway.
+- Tìm hiểu cơ chế xác thực người dùng bằng Amazon Cognito.
+- Thực hành xây dựng REST API đơn giản kết nối Lambda với DynamoDB.
+- Làm quen với AWS Serverless Application Model và Infrastructure as Code.
+- Đánh giá khả năng áp dụng kiến trúc Serverless cho Smart Attendance SaaS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Nhiệm vụ cụ thể cần triển khai:
 
+| Ngày | Nhiệm vụ chi tiết | Ngày bắt đầu | Ngày hoàn thành | Nguồn tham khảo |
+|---|---|---:|---:|---|
+| Thứ Hai | Tìm hiểu AWS Lambda, Lambda Function, Trigger, Execution Role, Environment Variable, Timeout và cơ chế tính chi phí. | 18/05/2026 | 18/05/2026 | AWS Lambda Documentation |
+| Thứ Ba | Thực hành tạo Lambda Function bằng Node.js; xử lý Request, Response và kiểm tra Function bằng Test Event trên AWS Console. | 19/05/2026 | 19/05/2026 | AWS Lambda Workshop |
+| Thứ Tư | Tìm hiểu Amazon API Gateway; tạo REST API, Method, Resource và tích hợp API Gateway với Lambda Function. | 20/05/2026 | 20/05/2026 | Amazon API Gateway Documentation |
+| Thứ Năm | Tìm hiểu Amazon Cognito User Pool, quy trình đăng ký, đăng nhập, xác nhận tài khoản và sử dụng JWT Token để xác thực API. | 21/05/2026 | 21/05/2026 | Amazon Cognito Documentation |
+| Thứ Sáu | Tìm hiểu AWS SAM và CloudFormation; xây dựng ứng dụng Serverless thử nghiệm gồm API Gateway, Lambda và DynamoDB; đánh giá khả năng áp dụng cho dự án. | 22/05/2026 | 22/05/2026 | AWS SAM Documentation |
 
-### Kết quả đạt được tuần 5:
+### Kết quả thu hoạch thực tế sau Tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu được đặc điểm và lợi ích của kiến trúc Serverless trên AWS.
+- Tạo và kiểm thử thành công Lambda Function bằng Node.js.
+- Biết cách cấu hình IAM Execution Role cho Lambda theo nguyên tắc phân quyền tối thiểu.
+- Tạo REST API bằng Amazon API Gateway và kết nối thành công với Lambda.
+- Thực hiện thử nghiệm đọc và ghi dữ liệu từ Lambda vào DynamoDB.
+- Hiểu quy trình đăng ký, đăng nhập và xác thực người dùng bằng Amazon Cognito.
+- Nắm được vai trò của Access Token, ID Token và Refresh Token.
+- Làm quen với AWS SAM Template và cách mô tả tài nguyên AWS bằng mã nguồn.
+- Xác định kiến trúc Serverless là giải pháp phù hợp cho Smart Attendance SaaS nhờ khả năng tự động mở rộng, giảm công việc vận hành máy chủ và tối ưu chi phí cho giai đoạn đầu.

@@ -1,37 +1,92 @@
 ---
-title : "Dọn dẹp tài nguyên"
-date : 2024-01-01
-weight : 6
-chapter : false
-pre : " <b> 5.6. </b> "
+title: "Dọn dẹp tài nguyên"
+date: 2026-07-22
+weight: 6
+chapter: false
+pre: "<b>5.6. </b>"
 ---
 
-#### Dọn dẹp tài nguyên
+# Dọn dẹp tài nguyên
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Sau khi thực hành, xóa tài nguyên không còn sử dụng để hạn chế chi phí.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+## 1. Sao lưu dữ liệu cần thiết
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+Trước khi xóa:
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+- Tải các report cần giữ.
+- Xuất dữ liệu DynamoDB nếu cần.
+- Lưu CloudWatch Logs phục vụ báo cáo.
+- Kiểm tra file cấu hình và Output của Stack.
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+## 2. Xóa dữ liệu S3
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+```powershell
+aws s3 rm s3://TEN_FRONTEND_BUCKET --recursive
+aws s3 rm s3://TEN_REPORT_BUCKET --recursive
+```
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+Nếu Versioning đang bật, cần xóa cả version và delete marker.
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+## 3. Xóa hoặc Disable CloudFront
 
-5. Xóa các S3 bucket
+1. Mở CloudFront Console.
+2. Chọn Distribution.
+3. Chọn Disable.
+4. Chờ trạng thái deploy hoàn tất.
+5. Chọn Delete.
 
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+## 4. Xóa SAM Stack
+
+```powershell
+cd C:\Users\nguye\smart-attendance-saas\backend
+
+sam delete `
+  --stack-name smart-attendance-saas `
+  --region ap-southeast-1
+```
+
+## 5. Kiểm tra tài nguyên còn sót
+
+Kiểm tra:
+
+- CloudFormation.
+- Lambda.
+- API Gateway.
+- Cognito.
+- DynamoDB.
+- SQS và DLQ.
+- Step Functions.
+- EventBridge.
+- SES.
+- S3.
+- CloudFront.
+- CloudWatch Log Groups và Alarms.
+- Secrets Manager.
+- KMS key do workshop tạo.
+
+## 6. Kết quả workshop
+
+Bạn đã thực hiện:
+
+- Đọc cấu trúc mã nguồn Smart Attendance SaaS.
+- Chạy Frontend và Backend local.
+- Validate và Build AWS SAM Template.
+- Triển khai Backend Serverless.
+- Tích hợp Cognito JWT với Frontend.
+- Kiểm thử Clock-in, Clock-out, Attendance, Profile và Report.
+- Triển khai Frontend qua S3 và CloudFront.
+- Rà soát IAM, Tenant Isolation và dữ liệu nhạy cảm.
+- Theo dõi hệ thống bằng CloudWatch.
+- Dọn dẹp tài nguyên.
+
+## 7. Hướng phát triển
+
+- Hoàn thiện Multi-tenant SaaS.
+- Thêm QR, PIN và GPS.
+- Bổ sung Dashboard thống kê.
+- Tự động xuất CSV/Excel.
+- Dùng Step Functions và SQS cho tác vụ dài.
+- Dùng EventBridge và SES cho thông báo.
+- Tự động triển khai bằng CodePipeline và CodeBuild.
+- Bổ sung AWS WAF, Security Hub, GuardDuty và X-Ray.
