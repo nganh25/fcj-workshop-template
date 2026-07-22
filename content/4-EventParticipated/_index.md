@@ -1,19 +1,19 @@
 ---
-title: "Các events đã tham gia"
-date: 2026-07-22
+title: "4. Các events đã tham gia"
 weight: 4
 chapter: false
-pre: "<b>4. </b>"
 ---
 
-# Các events đã tham gia
 
-Trong thời gian học tập và thực hiện dự án, tôi tham gia các hoạt động chuyên môn giúp mở rộng kiến thức về hiện đại hóa ứng dụng, kiến trúc hướng sự kiện và triển khai dự án Cloud.
 
-## [Event 1 – GenAI-powered App-DB Modernization Workshop](4.1-event1/)
+Trong thời gian tham gia chương trình **Workforce Bootcamp – First Cloud AI Journey**, tôi chưa có cơ hội tham gia các sự kiện, hội thảo hoặc hoạt động cộng đồng chuyên môn bên ngoài chương trình.
 
-Workshop tập trung vào Domain-Driven Design, Event-Driven Architecture, lựa chọn Compute Service và Amazon Q Developer.
+Thời gian này, tôi chủ yếu tập trung vào:
 
-## [Event 2 – Smart Attendance SaaS Final Demo & Technical Review](4.2-event2/)
+- Tham gia các buổi đào tạo AWS trong chương trình.
+- Thực hành triển khai các dịch vụ AWS.
+- Làm việc nhóm trong dự án Smart Attendance SaaS.
+- Thảo luận kỹ thuật và báo cáo tiến độ dự án.
+- Chuẩn bị tài liệu, blog và workshop.
 
-Buổi trình bày cuối kỳ tập trung vào kiến trúc, luồng nghiệp vụ, bảo mật, CI/CD, giám sát và các bài học từ quá trình xây dựng Smart Attendance SaaS.
+Phần này sẽ được cập nhật khi tôi tham gia các sự kiện, hội thảo hoặc hoạt động cộng đồng liên quan đến AWS, Cloud Computing và Công nghệ thông tin.

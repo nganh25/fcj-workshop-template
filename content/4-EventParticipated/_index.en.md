@@ -1,19 +1,19 @@
 ---
-title: "Participated Events"
-date: 2026-07-22
+title: "4. Events Participated"
 weight: 4
 chapter: false
-pre: "<b>4. </b>"
 ---
 
-# Participated Events
 
-During the program and project period, I participated in professional activities that expanded my knowledge of application modernization, event-driven architecture, and cloud project delivery.
 
-## [Event 1 – GenAI-powered App-DB Modernization Workshop](4.1-event1/)
+During the **Workforce Bootcamp – First Cloud AI Journey** program, I did not have the opportunity to participate in any external professional events, conferences, or community activities.
 
-The workshop covered Domain-Driven Design, event-driven architecture, compute-service selection, and Amazon Q Developer.
+During this period, I mainly focused on:
 
-## [Event 2 – Smart Attendance SaaS Final Demo & Technical Review](4.2-event2/)
+- Attending AWS training sessions within the program.
+- Practicing the deployment of AWS services.
+- Collaborating with the team on the Smart Attendance SaaS project.
+- Participating in technical discussions and project progress reports.
+- Preparing technical documentation, blogs, and workshop materials.
 
-The final presentation reviewed the architecture, business flows, security, CI/CD, monitoring, and lessons learned from building Smart Attendance SaaS.
+This section will be updated when I participate in events, conferences, or community activities related to AWS, Cloud Computing, and Information Technology.
